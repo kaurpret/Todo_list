@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update todo data</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+</head>
+<body>
+    {% block content %}
+    <div class="a">
+        <form action="/update/{{id}}" method="post" class="a1">
+            {% csrf_token %}
+            <h2>ToDo List</h2>
+            <div class="b">
+            <label><h2>Title</h2></label>
+            <input type="text" name="title" value = {{title}}  placeholder="Add item here" class="b1" >
+            </div>
+            <div><div class="c">
+            <label><h2>Description</h2></label>
+            <textarea rows="5" class="c1" cols="25"   name="description" placeholder="Add item description here here">{{description}}</textarea>
+            </div>
+            <div class="b">
+            <label><h2>Priority</h2></label>
+            <input type="number" name="priority"  value = {{priority}}  placeholder="Add item priority here" class="b1">
+            </div>
+            
+            <div class="d">
+            <span><button>Update..</button></span>
+            </div>
+        </form>
+        
+    </div>
+
+    {% endblock %}
+</body>
+</html>

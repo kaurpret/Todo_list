@@ -1,0 +1,45 @@
+body{
+    background-color: honeydew;
+}
+.todo_1{
+    background-color: rgb(230,218,230);
+    padding-top: 20px;
+    margin-left: 330px;
+    padding-left: 20px;
+    width:600px;
+    height: auto;
+    border-radius: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(230,218,230);
+    font-size: 20px;
+
+}
+.todo_1>span>button{
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: rgb(177,165,177);
+    color: rgb(230,218,230);
+}
+
+.todo_2{
+    background-color: rgb(177,165,177);
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    /* color: rgb(143, 138, 143); */
+}
+
+.todo_2>span>button{
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: rgb(177,165,177);
+    color: rgb(230,218,230);
+}
+

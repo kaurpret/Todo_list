@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Added Todo list</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/todo1.css' %}">
+</head>
+<body>
+    <div class="todo_1">
+    <span><button><a href="/">Go to Home</a></button></span>
+    <span><button><a href="sort">Sort data</a></button></span>
+<br>
+<br>
+    {% for i in result %}
+   <div class="todo_2"><big >Title :- </big>{{i.title}}
+    <br>
+    <big >Description :- </big>{{i.description}}
+    <br>
+    <big >Priority :- </big>{{i.priority}}
+    <br>
+
+    <big >Created_at :- </big>{{i.created_at}}
+    <br>
+    <br>
+    <span><button><a href="/edit/{{i.id}}">Edit</a></button></span>
+    <span><button><a href="/delete/{{i.id}}">Delete</a></button></span>
+</div>
+    
+    <br>
+    
+
+    {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+</head>
+<body>
+    {% block content %}
+    
+    <div class="a">
+<span><a href="{% url 'list_item' %}"><button class="l1">List todo</button></a> <a href="/"><button class="l1">Home</button></a> 
+
+        <form action="search" method="post" class="e1">
+            {% csrf_token %}
+            <!-- <label><h2>Search</h2></label> -->
+            <input type="text" name="search" placeholder="type here" class="e2">
+            <span><button type="submit" class="e3">search</button></span>
+        </form>
+        
+        <form action="submit" method="post" class="a1">
+            {% csrf_token %}
+            <h2>ToDo List</h2>
+            <div class="b">
+            <label><h2>Title</h2></label>
+            <input type="text" name="title" placeholder="Add item here" class="b1">
+            </div>
+            <div><div class="c">
+            <label><h2>Description</h2></label>
+            <textarea rows="5" class="c1" cols="25"  name="description" placeholder="Add item description here here"></textarea>
+            </div>
+            <div class="b">
+            <label><h2>Priority</h2></label>
+            <input type="number" name="priority" placeholder="Add item priority here" class="b1">
+            </div>
+           
+            <div class="d">
+            <span><button>Add..</button></span>
+
+            </div>
+        </form>
+        
+    </div>
+
+    {% endblock %}
+</body>
+</html>
