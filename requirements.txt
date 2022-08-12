@@ -1,0 +1,6 @@
+Django
+Python
+HTML
+CSS
+Javascript
+Bootstrap4
